@@ -14,7 +14,7 @@ for (let i = 0; i < initialMatrix.length; i++) {
 }
 
 console.log("Второй способ")
-let arr = new Array(9);
+let arr = [];
 for (let i = 0; i < 3; i++) {
     arr[i] = new Array(3);
 }
@@ -24,15 +24,14 @@ for (let i = 0; i < 3; i++) {
             arr[i][j] = j + 1;
         } else if ((i === 1)) {
             arr[i][j] = j + 4;
-        } else (arr[i][j] = j + 7)
+        } else {
+            arr[i][j] = j + 7;
+        }
     }
 }
 
 for (let i = 0; i < 3; i++) {
     console.log(arr[i].join(" "))
-    if (i % 3 === 0 && i !== 0) {
-        console.log('\n')
-    }
 }
 
 
