@@ -12,6 +12,8 @@
 // // 4
 // // buzz
 
+//1 способ (if - else)
+
 const fizzbuzz = (n) => {
     for (let i = 1; i <= n; i++) {
         if (i % 3 === 0 && i % 5 === 0) {
@@ -27,3 +29,43 @@ const fizzbuzz = (n) => {
 }
 
 fizzbuzz(15);
+
+//2 способ
+
+// const fizzbuzz = (num) => {
+//     let str;
+//     for (let i = 1; i <= num; i++) {
+//         str = "";
+//         if (i % 3 === 0) {
+//             str = "fizz";
+//         }
+//         if (i % 5 === 0) {
+//             str += "buzz";
+//         }
+//         console.log(str || i);
+//     }
+// }
+//
+// fizzbuzz(15);
+
+//3 способ
+
+// let n = 15;
+// for (let i = 1; i <= n; i++) {
+//     let str = (i % 3 ? '' : 'Fizz') + (i % 5 ? '' : 'Buzz');
+//     console.log(str == '' ? i : str);
+// }
+
+// 4 способ
+// let n = 15;
+// for (let i = 1; i <= n; i++) {
+//     let str = '';
+//     if (i % 3 === 0) {
+//         str += 'Fizz';
+//     }
+//     if (i % 5 === 0) {
+//         str += 'Buzz';
+//     }
+//
+//     console.log(str ? str : i);
+// }
