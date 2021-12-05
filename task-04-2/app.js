@@ -12,23 +12,23 @@
 // // 4
 // // buzz
 
-//1 способ (if - else)
-
-const fizzbuzz = (n) => {
-    for (let i = 1; i <= n; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("fizzbuzz")
-        } else if (i % 5 === 0) {
-            console.log("buzz")
-        } else if (i % 3 === 0) {
-            console.log("fizz")
-        } else {
-            console.log(i)
-        }
-    }
-}
-
-fizzbuzz(15);
+// //1 способ (if - else)
+//
+// const fizzbuzz = (n) => {
+//     for (let i = 1; i <= n; i++) {
+//         if (i % 3 === 0 && i % 5 === 0) {
+//             console.log("fizzbuzz")
+//         } else if (i % 5 === 0) {
+//             console.log("buzz")
+//         } else if (i % 3 === 0) {
+//             console.log("fizz")
+//         } else {
+//             console.log(i)
+//         }
+//     }
+// }
+//
+// fizzbuzz(15);
 
 //2 способ
 
@@ -69,3 +69,24 @@ fizzbuzz(15);
 //
 //     console.log(str ? str : i);
 // }
+
+// 5 способ
+
+const fizzbuzz = (n) => {
+    for (let i = 1; i <= n; i++) {
+        console.log(findMatch(i));
+    }
+};
+
+function findMatch(index) {
+    if (index % 15 === 0) {
+        return "fizzbuzz";
+    } else if (index % 3 === 0) {
+        return "fizz";
+    } else if (index % 5 === 0) {
+        return "buzz";
+    }
+    return index;
+}
+
+fizzbuzz(30);
