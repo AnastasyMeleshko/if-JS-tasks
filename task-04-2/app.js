@@ -50,11 +50,11 @@
 
 //3 способ
 
-// let n = 15;
-// for (let i = 1; i <= n; i++) {
-//     let str = (i % 3 ? '' : 'Fizz') + (i % 5 ? '' : 'Buzz');
-//     console.log(str == '' ? i : str);
-// }
+let n = 15;
+for (let i = 1; i <= n; i++) {
+    let str = ((i % 3)? 0 : 'Fizz') + ((i % 5) ? 0 : 'Buzz');
+    console.log(str == '' ? i : str);
+}
 
 // 4 способ
 // let n = 15;
@@ -72,21 +72,21 @@
 
 // 5 способ
 
-const fizzbuzz = (n) => {
-    for (let i = 1; i <= n; i++) {
-        console.log(findMatch(i));
-    }
-};
-
-function findMatch(index) {
-    if (index % 15 === 0) {
-        return "fizzbuzz";
-    } else if (index % 3 === 0) {
-        return "fizz";
-    } else if (index % 5 === 0) {
-        return "buzz";
-    }
-    return index;
-}
-
-fizzbuzz(30);
+// const fizzbuzz = (n) => {
+//     for (let i = 1; i <= n; i++) {
+//         console.log(findMatch(i));
+//     }
+// };
+//
+// function findMatch(index) {
+//     if (index % 15 === 0) {
+//         return "fizzbuzz";
+//     } else if (index % 3 === 0) {
+//         return "fizz";
+//     } else if (index % 5 === 0) {
+//         return "buzz";
+//     }
+//     return index;
+// }
+//
+// fizzbuzz(30);
