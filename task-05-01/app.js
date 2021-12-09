@@ -1,10 +1,10 @@
-/*
-Вывести в ряд N-ое количество числел Фибоначи
-https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%B0_%D0%A4%D0%B8%D0%B1%D0%BE%D0%BD%D0%B0%D1%87%D1%87%D0%B8
-fibonacci(4) -> 0, 1, 1, 2
-*/
-
-// 1 способ
+// /*
+// Вывести в ряд N-ое количество числел Фибоначи
+// https://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D1%81%D0%BB%D0%B0_%D0%A4%D0%B8%D0%B1%D0%BE%D0%BD%D0%B0%D1%87%D1%87%D0%B8
+// fibonacci(4) -> 0, 1, 1, 2
+// */
+//
+// // 1 способ
 
 let initialArray = [];
 function fibonacci(n) {
@@ -26,8 +26,8 @@ fibonacci(0);
 fibonacci(1);
 fibonacci(2);
 fibonacci(9);
-
-// 2 способ
+//
+// // 2 способ
 
 function fibo(n) {
     if (n === 0) {
@@ -46,3 +46,4 @@ console.log(fibo(0))
 console.log(fibo(1))
 console.log(fibo(2))
 console.log(fibo(9))
+
