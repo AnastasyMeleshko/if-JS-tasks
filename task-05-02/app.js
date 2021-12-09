@@ -36,3 +36,9 @@ for (let number of arr) {
     }
 }
 console.log(resultArr);
+
+//3 способ
+
+const result = [1, 5, 2, 3, 4, 3, 2, 4, 1, 5, 6]
+    .reduce((acc, current) => acc.includes(current) ? acc : [...acc, current], []);
+console.log(result);
