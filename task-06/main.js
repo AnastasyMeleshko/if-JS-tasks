@@ -19,7 +19,7 @@ if (k <= n) {
     arrRotate = initialArray.splice(initialArray.length - k, k);
     initialArray.unshift(...arrRotate);
 } else {
-    let count = k - (n * Math.trunc(k / n))
+    let count = k - (n * Math.trunc(k / n));
     arrRotate = initialArray.splice(initialArray.length - count, count);
     initialArray.unshift(...arrRotate);
 }
