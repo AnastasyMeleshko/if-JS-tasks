@@ -9,11 +9,11 @@ to solve this problem?
 //1 способ
 
 let n = 7;
-let k = 3;
+let k = 23;
 let initialArray = [];
 let arrRotate = [];
-for (let elem=1; elem<=n; elem++) {
-    initialArray.push(elem);
+for (let i=1; i<=n; i++) {
+    initialArray.push(i);
 }
 console.log("Первоначальный массив: " + initialArray);
 arrRotate = initialArray.splice(initialArray.length - k, k);
@@ -23,19 +23,19 @@ console.log("Полученный массив: " + initialArray);
 //2 способ
 
 let n2 = 7;
-let k2 = 3;
-let initialArray2 = [];
+let k2 = 23;
+let initialArr = [];
 let arrResult = [];
-for (let elem=1; elem<=n; elem++) {
-    initialArray2.push(elem);
+for (let i=1; i<=n2; i++) {
+    initialArr.push(i);
 }
-console.log("Первоначальный массив: " + initialArray2);
-for (let i=0; i<initialArray2.length - k; i++) {
-    arrResult.push(initialArray2[i]);
+console.log("Первоначальный массив: " + initialArr);
+for (let i=0; i<initialArr.length - k2; i++) {
+    arrResult.push(initialArr[i]);
 }
-for (let j=initialArray.length; j>=initialArray.length-k; j--) {
-    if (initialArray2[j]) {
-        arrResult.unshift(initialArray2[j]);
+for (let j=initialArr.length; j>=initialArr.length-k2; j--) {
+    if (initialArr[j]) {
+        arrResult.unshift(initialArr[j]);
     }
 }
 console.log("Полученный массив: " + arrResult);
