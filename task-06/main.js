@@ -9,7 +9,7 @@ to solve this problem?
 //1 способ
 
 let n = 7;
-let k = 8;
+let k = 13;
 let initialArray = [];
 for (let i = 1; i <= n; i++) {
     initialArray.push(i);
@@ -23,7 +23,7 @@ console.log("Полученный массив: " + initialArray);
 //2 способ
 
 let n2 = 7;
-let k2 = 8;
+let k2 = 11;
 let initialArr = [];
 let arrResult = [];
 for (let i = 1; i <= n2; i++) {
@@ -34,9 +34,7 @@ console.log("Первоначальный массив: " + initialArr);
     for (let i = 0; i < initialArr.length - count2; i++) {
         arrResult.push(initialArr[i]);
     }
-    for (let j = initialArr.length; j >= initialArr.length - count2; j--) {
-        if (initialArr[j]) {
+    for (let j = initialArr.length-1; j >= initialArr.length - count2; j--) {
             arrResult.unshift(initialArr[j]);
-        }
 }
 console.log("Полученный массив: " + arrResult);
