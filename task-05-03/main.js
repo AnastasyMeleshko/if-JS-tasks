@@ -20,9 +20,9 @@ let replace = /0/gi;
 let newString= initialString.replace(replace, 'zero');
 console.log("Полученный массив: ");
 console.log(newString.split(" "));
-
-// 2 способ (type for all items is number, but for items with 0 - string)
-
+//
+// // 2 способ (type for all items is number, but for items with 0 - string)
+//
 let newMas = [];
 const lowLimit = 0;
 const highLimit = 100;
@@ -45,3 +45,27 @@ function funZero(newArray){
 }
 console.log("Замена нулей на 'zero' при помощи функции: ");
 console.log(funZero(newMas));
+
+// 3 способ
+
+let arr = [];
+let min=0;
+let max =100;
+for (let i = 0; i < 10; i++) {
+    arr.push(Math.round(Math.random() * (max-min)));
+}
+console.log("Исходный массив: ")
+console.log(arr);
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === 0) {
+        arr[i] = "zero";
+    }
+    if (arr[i] % 100 === 0) {
+        arr[i] = arr[i]/100+'zerozero';
+    }
+    if (arr[i] % 10 === 0 || arr[i] === 0) {
+        arr[i] = arr[i]/10 +'zero';
+    }
+}
+console.log("Полученный массив: ")
+console.log(arr);
