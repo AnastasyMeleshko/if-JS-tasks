@@ -4,9 +4,16 @@
 Ответ: 'ahb' 'acb' 'aeb' 'aeeb' 'adcb' 'axeb'
 */
 
+//1 способ
 let str1 = "ahb acb aeb aeeb adcb axeb";
 let answer1 = /a.?.b/g;
 console.log(str1.match(answer1));
+
+
+//2 способ
+let str11 = "ahb acb aeb aeeb adcb axeb";
+let answer11 = /a\S*b/g;
+console.log(str11.match(answer11));
 
 
 /*2. Дана строка 'aa aba abba abbba abca abea'.
