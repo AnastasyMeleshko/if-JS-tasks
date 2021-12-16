@@ -42,7 +42,14 @@ console.log(str3.match(answer3));
 a может быть любой символ (кроме a).
 */
 
+//1 способ
 let str4 = "aba accca azzza wwwwa";
 let srt4Search = /\ba(?!a).?.?.a\b/g;
 let answer4 = str4.replace(srt4Search, "!");
 console.log(answer4);
+
+//2 способ
+let str44 = "aba accca azzza wwwwa";
+let srt4Search4 = /\ba(?!a)\w+a\b/g;
+let answer44 = str44.replace(srt4Search4, "!");
+console.log(answer44);
