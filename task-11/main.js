@@ -10,6 +10,8 @@ For example, given the following matrix:
 You should return [1,2,3,6,9,8,7,4,5].
 */
 
+let givenArray6 = [];
+
 let givenArray1 = [
     [ 1, 2],
     [ 4, 5]
@@ -98,6 +100,10 @@ let givenArray5 = [
 //2 способ
 
 function getSpiral(arr) {
+    if (arr.length === 0) {
+        return [];
+    }
+
     let resultArr = [];
     let firstRow = [...arr[0]];
     let lastRow = arr[arr.length-1].reverse();
@@ -145,10 +151,11 @@ function getSpiral(arr) {
     }
 }
 
-
+console.log(getSpiral(givenArray6));
 console.log(getSpiral(givenArray1));
 console.log(getSpiral(givenArray2));
 console.log(getSpiral(givenArray3));
 console.log(getSpiral(givenArray4));
 console.log(getSpiral(givenArray5));
+
 
