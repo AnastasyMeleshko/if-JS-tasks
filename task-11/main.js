@@ -45,17 +45,62 @@ let givenArray5 = [
     [ 7, 8, 9, 5, 7, 6]
 ];
 
+//1 способ
+
+// function getSpiral(arr) {
+//     let resultArr = [];
+//     let firstRow = [...arr[0]];
+//     let lastRow = arr[arr.length-1].reverse();
+//
+//     if (arr.length === 2) {
+//         resultArr.push(...firstRow);
+//         resultArr.push(...lastRow);
+//         return resultArr;
+//     }
+//
+//     resultArr.push(...firstRow);
+//
+//     let lastCol = [];
+//     let firstCol = [];
+//
+//     for (let i=0; i<arr.length; i++) {
+//         for (let j=0; j<arr[i].length; j++) {
+//             if ((j === arr[0].length-1) && (j !== 0) && (i !== 0) && ((i !== arr.length-1))) {
+//                 lastCol.push(arr[i][j]);
+//             }
+//             if ((j === 0) && (i !== 0) && ((i !== arr[0].length-1))) {
+//                 firstCol.push(arr[i][j]);
+//             }
+//         }
+//     }
+//         resultArr.push(...lastCol);
+//         resultArr.push(...lastRow);
+//         resultArr.push(...firstCol.reverse());
+//
+//     if (arr.length === 3) {
+//         resultArr.push(arr[1][1]);
+//         return resultArr;
+//     }
+//
+//     if (arr.length > 3)  {
+//         arr = arr.slice(1,-1);
+//         for (let i = 0; i<arr.length; i++) {
+//             arr[i] = arr[i].slice(1,-1);
+//         }
+//         let arr2 = [...arr];
+//         let resultArr2 = getSpiral(arr2);
+//         resultArr.push(...resultArr2);
+//         return  resultArr;
+//     }
+//
+// }
+
+//2 способ
 
 function getSpiral(arr) {
     let resultArr = [];
     let firstRow = [...arr[0]];
     let lastRow = arr[arr.length-1].reverse();
-
-    if (arr.length === 2) {
-        resultArr.push(...firstRow);
-        resultArr.push(...lastRow);
-        return resultArr;
-    }
 
     resultArr.push(...firstRow);
 
@@ -72,26 +117,32 @@ function getSpiral(arr) {
             }
         }
     }
-        resultArr.push(...lastCol);
-        resultArr.push(...lastRow);
-        resultArr.push(...firstCol.reverse());
 
-    if (arr.length === 3) {
-        resultArr.push(arr[1][1]);
-        return resultArr;
+    if (lastCol.length !== 0) {
+        resultArr.push(...lastCol);
     }
 
-    if (arr.length > 3)  {
-        arr = arr.slice(1,-1);
+    if ((firstRow.length !== 1) && (lastRow.length !== 1)) {
+        resultArr.push(...lastRow);
+    }
+
+    if (firstCol.length !== 0) {
+        resultArr.push(...firstCol.reverse());
+    }
+
+    arr = arr.slice(1,-1);
+
+    if (arr.length === 0) {
+        return resultArr;
+    } else {
         for (let i = 0; i<arr.length; i++) {
             arr[i] = arr[i].slice(1,-1);
         }
-        let arr2 = [...arr];
-        let resultArr2 = getSpiral(arr2);
-        resultArr.push(...resultArr2);
-        return  resultArr;
+            let arr2 = [...arr];
+            let resultArr2 = getSpiral(arr2);
+            resultArr.push(...resultArr2);
+            return  resultArr;
     }
-
 }
 
 
@@ -100,3 +151,4 @@ console.log(getSpiral(givenArray2));
 console.log(getSpiral(givenArray3));
 console.log(getSpiral(givenArray4));
 console.log(getSpiral(givenArray5));
+
